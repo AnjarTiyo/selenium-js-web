@@ -1,0 +1,6 @@
+# Depedencies
+node_modules
+
+# Credentials
+.env
+.env*
