@@ -1,14 +1,14 @@
-@Register @User
-Feature: Register as a sociocommerce user
+@Register @Corp
+Feature: Register as a corporate user
     As an unregistered user,
-    I want to register into app as sociocommerce,
-    So I can use sociocommerce features
+    I want to register into app as corporate user,
+    So I can use corporate features
 
-  Background: Already on Sociocommerce Register Page
-    Given I open Sociocommerce Register Page
+  Background: Already on Corporate Register Page
+    Given I open Corporate Register Page
 
-  Scenario: Register new sociocommerce with valid data
-    When I register new Sociocommerce using valid data
+  Scenario: Register new corporate with valid data
+    When I register new Corporate using valid data
     Then I am redirected to email verification page
 
   Scenario: Register but doesnt provide name
@@ -26,9 +26,3 @@ Feature: Register as a sociocommerce user
   Scenario: Provide common password
     When I register with common password
     Then Message password masuk ke dalam daftar rentan is appeared
-
-  # Scenario: Too few username
-  # Scenario: Invalid email format
-  # Scenario: Too few password
-  # Scenario: Invalid phone format
-  # Scenario: Too few phone number

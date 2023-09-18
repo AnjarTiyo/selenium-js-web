@@ -53,6 +53,7 @@ class RegisterUserPage {
     get registerButton() {
         return this.driver.findElement(By.css("button.btn.btn-primary[type='submit']"));
     }
+
     get loader() {
         return this.driver.findElement(By.className("text-loading"));
     }
@@ -60,7 +61,6 @@ class RegisterUserPage {
     async waitPageToLoad() {
         await this.driver.wait(until.stalenessOf(this.loader), config.pageLoadTimeout);
     }
-
 
     async open() {
         await this.driver.get(process.env.BASE_URL + "/register");
@@ -74,7 +74,7 @@ class RegisterUserPage {
         await this.registerButton.click();
     }
 
-    async registerNewUser({userName, userEmail, userPassword, userPhone, isActive = true}) {
+    async registerNewUser(userName, userEmail, userPassword, userPhone, isActive = false) {
         const data = {
             name: userName || faker.person.fullName(),
             email: userEmail || faker.internet.email({ provider: 'yopmail.com' }).toLowerCase(),

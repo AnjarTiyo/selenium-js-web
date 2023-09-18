@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js --format json:./reports/report.json",
-    "test:register": "cucumber-js --tags @Register"
+    "test:register-corp": "cucumber-js --tags '@Register and @Corp' ",
+    "test:register-user": "cucumber-js --tags '@Register and @User' "
   },
   "keywords": [
     "selenium",
