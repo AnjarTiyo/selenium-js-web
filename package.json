@@ -1,7 +1,7 @@
 {
   "name": "selenium-js-web",
   "version": "1.0.0",
-  "description": "Web Automation Testing",
+  "description": "Web Automation Testing using Cucumber-js + Selenium",
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js --retry 1 --format json:./reports/report.json",
