@@ -48,6 +48,14 @@ class RegisterCorpPage {
     get registerButton(){
         return this.driver.findElement(By.css("button.btn.btn-primary[type='submit']"));
     }
+
+    async open(){
+        await this.driver.get(process.env.BASE_URL + "/corp/register");
+    }
+
+    async registerNewCorp(){
+        
+    }
 }
 
 module.exports = RegisterCorpPage;

@@ -3,10 +3,14 @@ const config = require("../../config");
 const LoginPage = require("../page/login.page");
 const { until } = require("selenium-webdriver");
 const SocioCommercePage = require("../page/sociocommerce.page");
+const RegisterUserPage = require("../page/register.page");
+const RegisterCorpPage = require("../page/register-corp.page");
 
 const driver = config.driver;
 const loginPage = new LoginPage(driver);
 const socioCommercePage = new SocioCommercePage(driver);
+const registerUserPage = new RegisterUserPage(driver);
+const registerCorpPage = new RegisterCorpPage(driver);
 
 const validUsername = process.env.VALID_USERNAME;
 const validCorporateUsername = process.env.VALID_CORPORATE_USERNAME
@@ -54,6 +58,43 @@ When('I click eye button', async () => {
 
 When('I login with too short password', async () => {
     await loginPage.performLogin(validUsername, 'a'.repeat(5));
+})
+
+When('I register new {} using valid data', async (registerType) => {
+    switch (registerType) {
+        case 'Sociocommerce':
+            await registerUserPage.registerNewUser();
+            break;
+        case 'Corp':
+            await registerCorpPage.registerNewCorp();
+            break;
+        default:
+            break;
+    }
+})
+
+When('I register but dont provide {}', async (missingField) => {
+    switch (missingField) {
+        case 'password':
+            await registerUserPage.passwordField.sendKeys(' ');
+            break;
+        case 'name':
+            await registerUserPage.userName.sendKeys(' ');
+            break;
+        case 'email':
+            await registerUserPage.userEmail.sendKeys(' ');
+            break;
+        case 'phone':
+            await registerUserPage.handphoneField.sendKeys(' ');
+            break;
+        default:
+            console.log('select username, email or password as missingField');
+            break;
+    }
+});
+
+When('I register with common password', async () => {
+    await registerUserPage.registerNewUser({'userPassword': 'password'});
 })
 
 

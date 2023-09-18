@@ -3,7 +3,8 @@ const { Options } = require("selenium-webdriver/chrome");
 require('dotenv').config();
 
 let chromeOptions = new Options();
-console.log('Headless is ', process.env.HEADLESS)
+// console.log('Headless is ', process.env.HEADLESS);
+// chromeOptions.debuggerAddress('localhost:9222');
 
 switch (process.env.HEADLESS) {
     case 'TRUE':
