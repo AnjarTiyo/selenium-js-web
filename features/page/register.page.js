@@ -74,7 +74,7 @@ class RegisterUserPage {
         await this.registerButton.click();
     }
 
-    async registerNewUser(userName, userEmail, userPassword, userPhone, isActive = true) {
+    async registerNewUser({userName, userEmail, userPassword, userPhone, isActive = true}) {
         const data = {
             name: userName || faker.person.fullName(),
             email: userEmail || faker.internet.email({ provider: 'yopmail.com' }).toLowerCase(),

@@ -73,4 +73,28 @@ When('I register new {} using valid data', async (registerType) => {
     }
 })
 
+When('I register but dont provide {}', async (missingField) => {
+    switch (missingField) {
+        case 'password':
+            await registerUserPage.passwordField.sendKeys(' ');
+            break;
+        case 'name':
+            await registerUserPage.userName.sendKeys(' ');
+            break;
+        case 'email':
+            await registerUserPage.userEmail.sendKeys(' ');
+            break;
+        case 'phone':
+            await registerUserPage.handphoneField.sendKeys(' ');
+            break;
+        default:
+            console.log('select username, email or password as missingField');
+            break;
+    }
+});
+
+When('I register with common password', async () => {
+    await registerUserPage.registerNewUser({'userPassword': 'password'});
+})
+
 
