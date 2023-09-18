@@ -4,6 +4,7 @@ const { expect } = require("chai");
 const SocioCommercePage = require("../page/sociocommerce.page");
 const { until, By } = require("selenium-webdriver");
 const LoginPage = require("../page/login.page");
+const sharedContext = require("../../helpers/shared-context");
 
 require('dotenv').config();
 
@@ -44,3 +45,18 @@ Then('When I click eye icon again it will masks my password again', async () => 
     await loginPage.eyeIcon.click();
     expect(await loginPage.passwordField.getAttribute('type')).to.equal('password');
 });
+
+Then('I am registered as sociocommerce user', async () => {
+    // await driver.sleep(5000);
+})
+
+Then('I am redirected to email verification page', async () => {
+    await driver.wait(until.urlContains('/register-verification'), config.pageLoadTimeout);
+
+    const registeredEmail = sharedContext.sharedData.data.email;
+    const currentUrl = await driver.getCurrentUrl();
+    
+    expect(currentUrl).to.equal(process.env.BASE_URL +
+        '/register-verification?email=' +
+        registeredEmail);
+})

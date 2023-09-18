@@ -4,7 +4,8 @@
   "description": "Web Automation Testing",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "cucumber-js",
+    "test:register": "cucumber-js --tags @Register"
   },
   "keywords": [
     "selenium",
@@ -13,6 +14,7 @@
   "author": "Anjar Tiyo Saputro",
   "license": "ISC",
   "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
     "chai": "^4.3.8",
     "chromedriver": "^116.0.0",
     "cucumber": "^6.0.7",
