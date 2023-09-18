@@ -13,6 +13,6 @@ After('@Login', async function () {
     await driver.navigate().refresh();
 });
 
-AfterAll(async function () {
+AfterAll({ timeout: 10000 }, async function () {
     await driver.quit()
 });

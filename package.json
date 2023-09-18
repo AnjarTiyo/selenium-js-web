@@ -6,7 +6,9 @@
   "scripts": {
     "test": "cucumber-js --format json:./reports/report.json",
     "test:register-corp": "cucumber-js --tags '@Register and @Corp' ",
-    "test:register-user": "cucumber-js --tags '@Register and @User' "
+    "test:register-user": "cucumber-js --tags '@Register and @User' ",
+    "test:forgot": "cucumber-js --tags @ForgotPassword",
+    "debug": "cucumber-js --tags @Only"
   },
   "keywords": [
     "selenium",
