@@ -26,15 +26,16 @@ Given('Initial password field is masked', async () => {
     expect(await loginPage.passwordField.getAttribute('type')).to.equal('password');
 })
 
-Given('I open {} Register Page', async (userType) => {
+Given('I open {} Register Page',{timeout: 30 * 1000}, async (userType) => {
     switch (userType) {
         case "Sociocommerce":
             await registerPage.open();
             break;
-        case "Corp":
+        case "Corporate":
             await registerCorpPage.open();
+            break;
         default:
-            console.error('select Sociocommerce or Corp only')
+            console.error('select Sociocommerce or Corporate only')
             break;
     }
 })

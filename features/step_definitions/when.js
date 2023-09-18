@@ -65,7 +65,7 @@ When('I register new {} using valid data', async (registerType) => {
         case 'Sociocommerce':
             await registerUserPage.registerNewUser();
             break;
-        case 'Corp':
+        case 'Corporate':
             await registerCorpPage.registerNewCorp();
             break;
         default:
@@ -94,7 +94,12 @@ When('I register but dont provide {}', async (missingField) => {
 });
 
 When('I register with common password', async () => {
-    await registerUserPage.registerNewUser({'userPassword': 'password'});
+    await registerUserPage.registerNewUser(
+        undefined,
+        undefined,
+        "P@ssword",
+        undefined
+    );
 })
 
 

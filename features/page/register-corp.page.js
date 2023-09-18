@@ -1,4 +1,7 @@
-const { By } = require("selenium-webdriver");
+const { By, until } = require("selenium-webdriver");
+const {faker} = require("@faker-js/faker");
+const config = require("../../config");
+const sharedContext = require('../../helpers/shared-context');
 
 class RegisterCorpPage {
     constructor(driver){
@@ -49,12 +52,45 @@ class RegisterCorpPage {
         return this.driver.findElement(By.css("button.btn.btn-primary[type='submit']"));
     }
 
-    async open(){
-        await this.driver.get(process.env.BASE_URL + "/corp/register");
+    get loader() {
+        return this.driver.findElement(By.className("text-loading"));
     }
 
-    async registerNewCorp(){
-        
+    async waitPageToLoad() {
+        await this.driver.wait(until.stalenessOf(this.loader), config.pageLoadTimeout);
+    }
+
+    async open(){
+        await this.driver.get(process.env.BASE_URL + "/corp/register");
+        await this.waitPageToLoad();
+    }
+
+    async clickRegister() {
+        await this.driver.executeScript('arguments[0].scrollIntoView();', this.registerButton);
+        await this.driver.wait(until.elementIsEnabled(this.registerButton), config.elementTimeout);
+        await this.driver.sleep(1000);
+        await this.registerButton.click();
+    }
+
+    async registerNewCorp(userName, userEmail, userPassword, userPhone, isActive = false) {
+        const data = {
+            name: userName || faker.company.name(),
+            email: userEmail || faker.internet.email({ provider: 'yopmail.com' }).toLowerCase(),
+            password: userPassword || 'Keon123!',
+            phone: userPhone || faker.phone.number('02748999999##'),
+            is_active: isActive,
+            member_category: "corporate"
+        };
+        // console.log(data);
+        await this.companyName.sendKeys(data.name);
+        await this.companyEmail.sendKeys(data.email);
+        await this.passwordField.sendKeys(data.password);
+        await this.handphoneField.sendKeys(data.phone);
+        await this.clickRegister();
+        // await activateAccount();
+
+        // share registered data
+        sharedContext.sharedData.data = data;
     }
 }
 
