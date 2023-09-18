@@ -1,0 +1,1419 @@
+[
+  {
+    "description": "    As an registered user,\n    I want reset my password because I forgot it,\n    So I can use my account again",
+    "keyword": "Feature",
+    "name": "Forgot password",
+    "line": 2,
+    "id": "forgot-password",
+    "tags": [
+      {
+        "name": "@ForgotPassword",
+        "line": 1
+      }
+    ],
+    "uri": "features/forgot-password.feature",
+    "elements": [
+      {
+        "id": "forgot-password;use-forgot-password-with-registered-email",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Use forgot password with registered email",
+        "tags": [
+          {
+            "name": "@ForgotPassword",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I open Login Page",
+            "match": {
+              "location": "features/step_definitions/given.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3958000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I click Forgot Password link",
+            "match": {
+              "location": "features/step_definitions/given.js:56"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 10151000000,
+              "error_message": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//small[contains(text(), 'Lupa password?')]\"}\n  (Session info: chrome=117.0.5938.88)\n    at Object.throwDecodedError (/Users/mira/Desktop/Anjar/QE/OrderOnline/node_modules/selenium-webdriver/lib/error.js:524:15)\n    at parseHttpResponse (/Users/mira/Desktop/Anjar/QE/OrderOnline/node_modules/selenium-webdriver/lib/http.js:601:13)\n    at Executor.execute (/Users/mira/Desktop/Anjar/QE/OrderOnline/node_modules/selenium-webdriver/lib/http.js:529:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async thenableWebDriverProxy.execute (/Users/mira/Desktop/Anjar/QE/OrderOnline/node_modules/selenium-webdriver/lib/webdriver.js:745:17)\n    at async toWireValue (/Users/mira/Desktop/Anjar/QE/OrderOnline/node_modules/selenium-webdriver/lib/webdriver.js:145:15)\n    at async /Users/mira/Desktop/Anjar/QE/OrderOnline/node_modules/selenium-webdriver/lib/webdriver.js:195:16\n    at async forEachKey (/Users/mira/Desktop/Anjar/QE/OrderOnline/node_modules/selenium-webdriver/lib/webdriver.js:189:9)\n    at async convertKeys (/Users/mira/Desktop/Anjar/QE/OrderOnline/node_modules/selenium-webdriver/lib/webdriver.js:194:3)\n    at async thenableWebDriverProxy.execute (/Users/mira/Desktop/Anjar/QE/OrderOnline/node_modules/selenium-webdriver/lib/webdriver.js:743:22)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I enter registered email to email field",
+            "match": {
+              "location": "features/step_definitions/given.js:62"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I click Reset Password button",
+            "match": {
+              "location": "features/step_definitions/when.js:117"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "Message Kami sudah mengirimkan link untuk reset password Anda. Tolong cek email Anda! is appeared",
+            "match": {
+              "location": "features/step_definitions/then.js:26"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "    As an user,\n    I want to login into the Apps\n    In order to user apps Feature",
+    "keyword": "Feature",
+    "name": "App Authorization",
+    "line": 2,
+    "id": "app-authorization",
+    "tags": [
+      {
+        "name": "@Login",
+        "line": 1
+      }
+    ],
+    "uri": "features/login.feature",
+    "elements": [
+      {
+        "id": "app-authorization;login-as-user",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Login as user",
+        "tags": [
+          {
+            "name": "@Login",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Login Page",
+            "match": {
+              "location": "features/step_definitions/given.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2698000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I login as sociocommerce user",
+            "match": {
+              "location": "features/step_definitions/when.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 416000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I am logged in",
+            "match": {
+              "location": "features/step_definitions/then.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 652000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I am on Social Commerce user dashboard page",
+            "match": {
+              "location": "features/step_definitions/then.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 851000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/hooks.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "app-authorization;login-as-corporate",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Login as corporate",
+        "tags": [
+          {
+            "name": "@Login",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Login Page",
+            "match": {
+              "location": "features/step_definitions/given.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3282000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I login as corporate user",
+            "match": {
+              "location": "features/step_definitions/when.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 271000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I am logged in",
+            "match": {
+              "location": "features/step_definitions/then.js:16"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5001000000,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout._onTimeout (/Users/mira/Desktop/Anjar/QE/OrderOnline/node_modules/cucumber/lib/user_code_runner.js:76:18)\n    at listOnTimeout (node:internal/timers:573:17)\n    at process.processTimers (node:internal/timers:514:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I am on Corporate user dashboard page",
+            "match": {
+              "location": "features/step_definitions/then.js:22"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/hooks.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 444000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "app-authorization;doesnt-provide-password-when-login",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Doesnt provide password when login",
+        "tags": [
+          {
+            "name": "@Login",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Login Page",
+            "match": {
+              "location": "features/step_definitions/given.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2453000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I login but doesnt provide password",
+            "match": {
+              "location": "features/step_definitions/when.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 271000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "Login button is disabled",
+            "match": {
+              "location": "features/step_definitions/then.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/hooks.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "app-authorization;doesnt-provide-username-when-login",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Doesnt provide username when login",
+        "tags": [
+          {
+            "name": "@Login",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Login Page",
+            "match": {
+              "location": "features/step_definitions/given.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2759000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I login but doesnt provide username",
+            "match": {
+              "location": "features/step_definitions/when.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 180000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "Login button is disabled",
+            "match": {
+              "location": "features/step_definitions/then.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "Message email tidak boleh kosong. is appeared",
+            "match": {
+              "location": "features/step_definitions/then.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/hooks.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 259000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "app-authorization;login-with-wrong-credentials",
+        "keyword": "Scenario",
+        "line": 29,
+        "name": "Login with wrong credentials",
+        "tags": [
+          {
+            "name": "@Login",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Login Page",
+            "match": {
+              "location": "features/step_definitions/given.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2498000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "I login with wrong credentials",
+            "match": {
+              "location": "features/step_definitions/when.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 297000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "I am not logged in",
+            "match": {
+              "location": "features/step_definitions/then.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "Message Kombinasi email dan password salah is appeared",
+            "match": {
+              "location": "features/step_definitions/then.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 323000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/hooks.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 231000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "app-authorization;login-with-invalid-email-format",
+        "keyword": "Scenario",
+        "line": 34,
+        "name": "Login with invalid email format",
+        "tags": [
+          {
+            "name": "@Login",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Login Page",
+            "match": {
+              "location": "features/step_definitions/given.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2445000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I login with invalid email format",
+            "match": {
+              "location": "features/step_definitions/when.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 238000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "Message email harus email valid. is appeared",
+            "match": {
+              "location": "features/step_definitions/then.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/hooks.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "app-authorization;reveal-password",
+        "keyword": "Scenario",
+        "line": 38,
+        "name": "Reveal password",
+        "tags": [
+          {
+            "name": "@Login",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Login Page",
+            "match": {
+              "location": "features/step_definitions/given.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2766000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 39,
+            "name": "I enter \"secret\" to password field",
+            "match": {
+              "location": "features/step_definitions/given.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 122000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "Initial password field is masked",
+            "match": {
+              "location": "features/step_definitions/given.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "I click eye button",
+            "match": {
+              "location": "features/step_definitions/when.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "It will reveal password",
+            "match": {
+              "location": "features/step_definitions/then.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "When I click eye icon again it will masks my password again",
+            "match": {
+              "location": "features/step_definitions/then.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 79000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/hooks.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 209000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "app-authorization;too-short-password",
+        "keyword": "Scenario",
+        "line": 45,
+        "name": "Too short password",
+        "tags": [
+          {
+            "name": "@Login",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Login Page",
+            "match": {
+              "location": "features/step_definitions/given.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2474000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 46,
+            "name": "I login with too short password",
+            "match": {
+              "location": "features/step_definitions/when.js:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 248000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 47,
+            "name": "Message The password must be at least 6 characters. is appeared",
+            "match": {
+              "location": "features/step_definitions/then.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 208000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/hooks.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 267000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "    As an unregistered user,\n    I want to register into app as corporate user,\n    So I can use corporate features",
+    "keyword": "Feature",
+    "name": "Register as a corporate user",
+    "line": 2,
+    "id": "register-as-a-corporate-user",
+    "tags": [
+      {
+        "name": "@Register",
+        "line": 1
+      },
+      {
+        "name": "@Corp",
+        "line": 1
+      }
+    ],
+    "uri": "features/register-corporate.feature",
+    "elements": [
+      {
+        "id": "register-as-a-corporate-user;register-new-corporate-with-valid-data",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Register new corporate with valid data",
+        "tags": [
+          {
+            "name": "@Register",
+            "line": 1
+          },
+          {
+            "name": "@Corp",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Corporate Register Page",
+            "match": {
+              "location": "features/step_definitions/given.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2479000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I register new Corporate using valid data",
+            "match": {
+              "location": "features/step_definitions/when.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2603000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I am redirected to email verification page",
+            "match": {
+              "location": "features/step_definitions/then.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "register-as-a-corporate-user;register-but-doesnt-provide-name",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Register but doesnt provide name",
+        "tags": [
+          {
+            "name": "@Register",
+            "line": 1
+          },
+          {
+            "name": "@Corp",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Corporate Register Page",
+            "match": {
+              "location": "features/step_definitions/given.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2415000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I register but dont provide name",
+            "match": {
+              "location": "features/step_definitions/when.js:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "Message name tidak boleh kosong. is appeared",
+            "match": {
+              "location": "features/step_definitions/then.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "register-as-a-corporate-user;register-but-doesnt-provide-email",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Register but doesnt provide email",
+        "tags": [
+          {
+            "name": "@Register",
+            "line": 1
+          },
+          {
+            "name": "@Corp",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Corporate Register Page",
+            "match": {
+              "location": "features/step_definitions/given.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2445000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I register but dont provide email",
+            "match": {
+              "location": "features/step_definitions/when.js:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 102000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "Message email tidak boleh kosong. is appeared",
+            "match": {
+              "location": "features/step_definitions/then.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "register-as-a-corporate-user;register-but-doesnt-provide-phone",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Register but doesnt provide phone",
+        "tags": [
+          {
+            "name": "@Register",
+            "line": 1
+          },
+          {
+            "name": "@Corp",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Corporate Register Page",
+            "match": {
+              "location": "features/step_definitions/given.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2405000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "I register but dont provide phone",
+            "match": {
+              "location": "features/step_definitions/when.js:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "Message phone tidak boleh kosong. is appeared",
+            "match": {
+              "location": "features/step_definitions/then.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 149000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "register-as-a-corporate-user;provide-common-password",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "Provide common password",
+        "tags": [
+          {
+            "name": "@Register",
+            "line": 1
+          },
+          {
+            "name": "@Corp",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Corporate Register Page",
+            "match": {
+              "location": "features/step_definitions/given.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2482000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "I register with common password",
+            "match": {
+              "location": "features/step_definitions/when.js:98"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5005000000,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout._onTimeout (/Users/mira/Desktop/Anjar/QE/OrderOnline/node_modules/cucumber/lib/user_code_runner.js:76:18)\n    at listOnTimeout (node:internal/timers:573:17)\n    at process.processTimers (node:internal/timers:514:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "Message password masuk ke dalam daftar rentan is appeared",
+            "match": {
+              "location": "features/step_definitions/then.js:26"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "    As an unregistered user,\n    I want to register into app as sociocommerce,\n    So I can use sociocommerce features",
+    "keyword": "Feature",
+    "name": "Register as a sociocommerce user",
+    "line": 2,
+    "id": "register-as-a-sociocommerce-user",
+    "tags": [
+      {
+        "name": "@Register",
+        "line": 1
+      },
+      {
+        "name": "@User",
+        "line": 1
+      }
+    ],
+    "uri": "features/register-user.feature",
+    "elements": [
+      {
+        "id": "register-as-a-sociocommerce-user;register-new-sociocommerce-with-valid-data",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Register new sociocommerce with valid data",
+        "tags": [
+          {
+            "name": "@Register",
+            "line": 1
+          },
+          {
+            "name": "@User",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Sociocommerce Register Page",
+            "match": {
+              "location": "features/step_definitions/given.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2461000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I register new Sociocommerce using valid data",
+            "match": {
+              "location": "features/step_definitions/when.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2600000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I am redirected to email verification page",
+            "match": {
+              "location": "features/step_definitions/then.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "register-as-a-sociocommerce-user;register-but-doesnt-provide-name",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Register but doesnt provide name",
+        "tags": [
+          {
+            "name": "@Register",
+            "line": 1
+          },
+          {
+            "name": "@User",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Sociocommerce Register Page",
+            "match": {
+              "location": "features/step_definitions/given.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2600000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I register but dont provide name",
+            "match": {
+              "location": "features/step_definitions/when.js:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 101000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "Message name tidak boleh kosong. is appeared",
+            "match": {
+              "location": "features/step_definitions/then.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "register-as-a-sociocommerce-user;register-but-doesnt-provide-email",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Register but doesnt provide email",
+        "tags": [
+          {
+            "name": "@Register",
+            "line": 1
+          },
+          {
+            "name": "@User",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Sociocommerce Register Page",
+            "match": {
+              "location": "features/step_definitions/given.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2504000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I register but dont provide email",
+            "match": {
+              "location": "features/step_definitions/when.js:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 119000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "Message email tidak boleh kosong. is appeared",
+            "match": {
+              "location": "features/step_definitions/then.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "register-as-a-sociocommerce-user;register-but-doesnt-provide-phone",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Register but doesnt provide phone",
+        "tags": [
+          {
+            "name": "@Register",
+            "line": 1
+          },
+          {
+            "name": "@User",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Sociocommerce Register Page",
+            "match": {
+              "location": "features/step_definitions/given.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2551000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "I register but dont provide phone",
+            "match": {
+              "location": "features/step_definitions/when.js:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 94000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "Message phone tidak boleh kosong. is appeared",
+            "match": {
+              "location": "features/step_definitions/then.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "register-as-a-sociocommerce-user;provide-common-password",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "Provide common password",
+        "tags": [
+          {
+            "name": "@Register",
+            "line": 1
+          },
+          {
+            "name": "@User",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Sociocommerce Register Page",
+            "match": {
+              "location": "features/step_definitions/given.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2631000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "I register with common password",
+            "match": {
+              "location": "features/step_definitions/when.js:98"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5006000000,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout._onTimeout (/Users/mira/Desktop/Anjar/QE/OrderOnline/node_modules/cucumber/lib/user_code_runner.js:76:18)\n    at listOnTimeout (node:internal/timers:573:17)\n    at process.processTimers (node:internal/timers:514:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "Message password masuk ke dalam daftar rentan is appeared",
+            "match": {
+              "location": "features/step_definitions/then.js:26"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "register-as-a-sociocommerce-user;register-with-already-registered-phone-number",
+        "keyword": "Scenario",
+        "line": 38,
+        "name": "Register with already registered phone number",
+        "tags": [
+          {
+            "name": "@Register",
+            "line": 1
+          },
+          {
+            "name": "@User",
+            "line": 1
+          },
+          {
+            "name": "@Only",
+            "line": 37
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open Sociocommerce Register Page",
+            "match": {
+              "location": "features/step_definitions/given.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2574000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 39,
+            "name": "I already register phone number \"08999999999999\" as users phone number",
+            "match": {
+              "location": "features/step_definitions/given.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2753000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 40,
+            "name": "I registered phone number \"08999999999999\" again",
+            "match": {
+              "location": "features/step_definitions/when.js:107"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5133000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "Message phone number already in use. is appeared",
+            "match": {
+              "location": "features/step_definitions/then.js:26"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5003000000,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout._onTimeout (/Users/mira/Desktop/Anjar/QE/OrderOnline/node_modules/cucumber/lib/user_code_runner.js:76:18)\n    at listOnTimeout (node:internal/timers:573:17)\n    at process.processTimers (node:internal/timers:514:7)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
