@@ -32,3 +32,10 @@ Feature: Register as a sociocommerce user
   # Scenario: Too few password
   # Scenario: Invalid phone format
   # Scenario: Too few phone number
+  # Scenario: Register with already registered email
+
+  @Only
+  Scenario: Register with already registered phone number
+    Given I already register phone number "08999999999999" as users phone number
+    When I registered phone number "08999999999999" again
+    Then Message phone number already in use. is appeared

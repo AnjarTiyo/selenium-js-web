@@ -26,6 +26,10 @@ class LoginPage {
         return this.driver.findElement(By.className("text-loading"));
     }
 
+    get forgotPassword() {
+        return this.driver.findElement(By.xpath("//small[contains(text(), 'Lupa password?')]"));
+    }
+
     async open() {
         await this.driver.get(process.env.BASE_URL + '/login');
         await this.waitPageToLoad();

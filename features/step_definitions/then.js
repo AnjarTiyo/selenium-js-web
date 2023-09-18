@@ -24,8 +24,13 @@ Then('I am on {} user dashboard page', async (position) => {
 });
 
 Then('Message {} is appeared', async (message) => {
-    const messageFound = await driver.findElement(By.xpath("//*[contains(text(),'" + message + "')]")).isDisplayed();
-    expect(messageFound).to.be.true;
+    try {
+        const messageFound = await driver.findElement(By.xpath("//*[contains(text(),'" + message + "')]")).isDisplayed();
+        expect(messageFound).to.be.true;
+    } catch (error) {
+        console.error('\x1b[31mError: Message not found\x1b[0m');
+        expect.fail('Message not found');
+    }
 });
 
 Then('I am not logged in', async () => {
@@ -55,7 +60,7 @@ Then('I am redirected to email verification page', async () => {
 
     const registeredEmail = sharedContext.sharedData.data.email;
     const currentUrl = await driver.getCurrentUrl();
-    
+
     expect(currentUrl).to.equal(process.env.BASE_URL +
         '/register-verification?email=' +
         registeredEmail);

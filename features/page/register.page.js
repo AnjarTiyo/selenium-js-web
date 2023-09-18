@@ -90,6 +90,7 @@ class RegisterUserPage {
         await this.handphoneField.sendKeys(data.phone);
         await this.clickRegister();
         // await activateAccount();
+        await this.driver.wait(until.urlContains('/register-verification'), config.pageLoadTimeout);
 
         // share registered data
         sharedContext.sharedData.data = data;

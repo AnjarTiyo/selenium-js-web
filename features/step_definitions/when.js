@@ -5,12 +5,14 @@ const { until } = require("selenium-webdriver");
 const SocioCommercePage = require("../page/sociocommerce.page");
 const RegisterUserPage = require("../page/register.page");
 const RegisterCorpPage = require("../page/register-corp.page");
+const ForgotPasswordPage = require("../page/forgot-password.page");
 
 const driver = config.driver;
 const loginPage = new LoginPage(driver);
 const socioCommercePage = new SocioCommercePage(driver);
 const registerUserPage = new RegisterUserPage(driver);
 const registerCorpPage = new RegisterCorpPage(driver);
+const forgotPasswordPage = new ForgotPasswordPage(driver);
 
 const validUsername = process.env.VALID_USERNAME;
 const validCorporateUsername = process.env.VALID_CORPORATE_USERNAME
@@ -100,6 +102,21 @@ When('I register with common password', async () => {
         "P@ssword",
         undefined
     );
+})
+
+When('I registered phone number {string} again', { timeout: 30000 }, async (phoneNumber) => {
+    await registerUserPage.open();
+    await registerUserPage.registerNewUser(
+        undefined,
+        undefined,
+        undefined,
+        phoneNumber
+    );
+})
+
+When('I click Reset Password button', async () => {
+    await forgotPasswordPage.resetButton.click();
+    await driver.wait(until.stalenessOf(forgotPasswordPage.emailField), config.elementTimeout);
 })
 
 
